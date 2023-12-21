@@ -1,0 +1,96 @@
+header {
+  display: flex;
+  border-bottom: 2px solid #0457aa;
+  height: 70px;
+}
+
+#menuContent {
+  display: none;
+}
+
+#menuButton {
+  padding: 20px 20px;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+}
+
+li a {
+  text-decoration: none;
+  background-color: white;
+  border: none;
+  color: #0457aa;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* första modalfönstret */
+#accessibleModal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  z-index: 1000;
+}
+
+#modalBackdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 900;
+}
+
+#closeModalBtn {
+  cursor: pointer;
+}
+
+button {
+  background-color: #0457aa;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* andra modalfönstret */
+#accessibleDialog {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+#closeDialogBtn {
+  cursor: pointer;
+}
+
+#accessibleDialog {
+  display: none;
+}

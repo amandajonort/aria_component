@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARIA</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <button id="menuButton" aria-expanded="false" onclick="toggleMenu()">
+        Meny
+      </button>
+      <nav id="menuContent" aria-hidden="true">
+        <ul>
+          <li><a href="#">Hem</a></li>
+          <li><a href="#">Om oss</a></li>
+          <li><a href="#">Tjänster</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+
+      <!-- knapp -->
+      <button id="openModalBtn" onclick="openModal()">
+        Öppna modalfönster
+      </button>
+      <!-- modalfönster -->
+      <div id="modalBackdrop" onclick="closeModal()"></div>
+      <div
+        id="accessibleModal"
+        role="dialog"
+        aria-labelledby="modalTitle"
+        aria-modal="true"
+        tabindex="-1"
+      >
+        <h2 id="modalTitle">Exempel på modalfönster</h2>
+        <p>Här är lite text i modalfönstret.</p>
+        <button id="closeModalBtn" onclick="closeModal()">Stäng</button>
+      </div>
+
+      <!-- <dialog> Vilka är fördelarna med att använda denna i tillgänglighets-synpunkt? 
+        <dialog> är en semantsik tag i HTML, den förklarar för användaren att det är en dialogruta eller
+            ett "subwindow". <dialog> främjar tillgängligheten och är bättre att använda istället för
+                t ex div, som är intetsägande.
+             -->
+
+      <!-- knapp 2 -->
+      <button id="openModalBtn" onclick="openModal()">
+        Öppna modalfönster
+      </button>
+      <!-- modalfönster 2 -->
+      <div id="modalBackdrop" onclick="closeModal()"></div>
+      <div
+        id="accessibleModal"
+        role="dialog"
+        aria-labelledby="modalTitle"
+        aria-modal="true"
+        tabindex="-1"
+      >
+        <h2 id="modalTitle">Exempel på modalfönster</h2>
+        <p>Här är lite text i modalfönstret.</p>
+        <button id="closeModalBtn" onclick="closeModal()">Stäng</button>
+      </div>
+
+    <script src="code.js"></script>
+  </body>
+</html>
